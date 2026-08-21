@@ -52,23 +52,23 @@ The tables were integrated through SQL to perform business analysis and were lat
 
 ## Project Workflow
 
-Berka Banking Dataset
-        ↓
-SQLite Database Setup
-        ↓
-Data Validation & Quality Checks
-        ↓
-Data Preparation
-        ↓
-SQL Business Analysis
-        ↓
-Python Exploratory Data Analysis
-        ↓
-Visual Validation
-        ↓
-Business Insights
-        ↓
-Business Recommendations
+1. **Berka Banking Dataset**
+   ↓
+2. **SQLite Database Setup**
+   ↓
+3. **Data Validation & Quality Checks**
+   ↓
+4. **Data Preparation**
+   ↓
+5. **SQL Business Analysis**
+   ↓
+6. **Python Exploratory Data Analysis**
+   ↓
+7. **Visual Validation**
+   ↓
+8. **Business Insights**
+   ↓
+9. **Business Recommendations**
 
 ---
 
