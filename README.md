@@ -252,6 +252,4 @@ Berka-Banking-Customer-Behaviour-Loan-Risk-Analysis/
 │
 ├── sql/
 │
-├── docs/
-│
 └── README.md
