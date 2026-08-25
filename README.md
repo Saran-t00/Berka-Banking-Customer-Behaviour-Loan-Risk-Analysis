@@ -489,7 +489,7 @@ Berka-Banking-Customer-Behaviour-Loan-Risk-Analysis/
 │   ├── Screenshot 2026-08-24 122027.png
 │   └── Screenshot 2026-08-24 122106.png
 │
-├── sql//
+├── sql/
 │
 └── README.md
 ```
