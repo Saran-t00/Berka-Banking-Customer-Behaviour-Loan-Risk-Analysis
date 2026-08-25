@@ -291,6 +291,9 @@ The project shows how raw banking data can be transformed into actionable busine
 
 ## Repository Structure
 
+## Repository Structure
+
+```text
 Berka-Banking-Customer-Behaviour-Loan-Risk-Analysis/
 │
 ├── data/
@@ -313,6 +316,6 @@ Berka-Banking-Customer-Behaviour-Loan-Risk-Analysis/
 │   └── Screenshot 2026-08-24 122106.png
 │
 ├── sql/
-│   └── README.md
 │
 └── README.md
+```
