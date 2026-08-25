@@ -172,7 +172,7 @@ The first page gives a quick view of the loan and customer side of the dataset.
 - Loan status C has the highest count at 403, followed by A (203), D (45) and B (31).
 - Loan amount increases with longer loan duration, reaching 35M at 60 months.
 - Loan amount is highest under status C at 69M.
-- Customer distribution is almost evenly split by gender, with around 3.0K female and 2.3K male customers.
+- Customer distribution is almost evenly split by gender, with around 2645 female and 2724 male customers.
 
 ### Page 2 — Loan Performance & Risk Analysis
 
