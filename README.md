@@ -33,22 +33,194 @@ Individual records alone do not provide a complete understanding of customer beh
 
 ## Dataset
 
-The Berka Banking dataset contains eight relational tables:
+## Dataset
 
-| Dataset | Description |
-|---|---|
-| `account.csv` | Customer account information and district association |
-| `client.csv` | Customer demographic information |
-| `disp.csv` | Relationship between customers and accounts |
-| `loan.csv` | Loan amount, duration, payments and repayment status |
-| `trans.csv` | Transaction history, amounts, balances and transaction types |
-| `order.csv` | Standing orders and scheduled payments |
-| `card.csv` | Bank card information |
-| `district.csv` | District-level demographic and regional information |
+The Berka Banking dataset contains eight relational tables covering customer information, accounts, loans, transactions, cards, standing orders, customer-account relationships, and district-level information.
 
-The tables were integrated through SQL to perform business analysis and were later validated using Python EDA.
+| Dataset | Rows | Columns | Description |
+|---|---:|---:|---|
+| `account.csv` | 4,500 | 4 | Customer account information, including district, account frequency, and account opening date |
+| `client.csv` | 5,369 | 3 | Customer information, including birth number and district association |
+| `disp.csv` | 5,369 | 4 | Relationship between customers and bank accounts |
+| `loan.csv` | 682 | 7 | Loan information including amount, duration, payments, and loan status |
+| `trans.csv` | 1,056,320 | 10 | Transaction history including transaction type, operation, amount, balance, and related accounts |
+| `order.csv` | 6,471 | 6 | Standing orders and scheduled payment information |
+| `card.csv` | 892 | 4 | Bank card information linked to customer-account relationships |
+| `district.csv` | 77 | 16 | District-level demographic and regional information |
+
+The tables were integrated through relational keys and analysed using SQL, Python, and Power BI.
 
 ---
+
+## Data Schema
+
+### 1. account.csv
+
+| Column | Data Type | Description |
+|---|---|---|
+| `account_id` | Integer | Unique identifier of the bank account |
+| `district_id` | Integer | Identifier of the district associated with the account |
+| `frequency` | Text | Frequency of account statements/payments |
+| `date` | Integer | Account creation date in the original dataset format |
+
+---
+
+### 2. client.csv
+
+| Column | Data Type | Description |
+|---|---|---|
+| `client_id` | Integer | Unique identifier of the customer |
+| `birth_number` | Integer | Customer birth number in the original dataset format |
+| `district_id` | Integer | Identifier of the district associated with the customer |
+
+---
+
+### 3. disp.csv
+
+| Column | Data Type | Description |
+|---|---|---|
+| `disp_id` | Integer | Unique identifier of the customer-account relationship |
+| `client_id` | Integer | Identifier of the customer |
+| `account_id` | Integer | Identifier of the bank account |
+| `type` | Text | Relationship type between customer and account |
+
+**Common values:**
+- `OWNER` — Account owner
+- `DISPONENT` — Authorized account user
+
+---
+
+### 4. loan.csv
+
+| Column | Data Type | Description |
+|---|---|---|
+| `loan_id` | Integer | Unique identifier of the loan |
+| `account_id` | Integer | Identifier of the account associated with the loan |
+| `date` | Integer | Loan issue date in the original dataset format |
+| `amount` | Integer | Total loan amount |
+| `duration` | Integer | Loan duration in months |
+| `payments` | Decimal | Monthly loan payment amount |
+| `status` | Text | Current or final loan status |
+
+**Loan status codes:**
+- `A` — Finished, no problems
+- `B` — Finished, loan not fully paid
+- `C` — Running, no problems
+- `D` — Running, client in debt
+
+---
+
+### 5. trans.csv
+
+| Column | Data Type | Description |
+|---|---|---|
+| `trans_id` | Integer | Unique identifier of the transaction |
+| `account_id` | Integer | Identifier of the account involved in the transaction |
+| `date` | Integer | Transaction date in the original dataset format |
+| `type` | Text | Transaction direction/type |
+| `operation` | Text | Specific transaction operation |
+| `amount` | Decimal | Transaction amount |
+| `balance` | Decimal | Account balance after the transaction |
+| `k_symbol` | Text | Transaction classification/category |
+| `bank` | Text | Related bank code |
+| `account` | Decimal | Related account identifier |
+
+**Transaction type meanings:**
+- `PRIJEM` — Credit / Money received
+- `VYDAJ` — Debit / Money spent
+- `VYBER` — Cash withdrawal
+
+**Operation meanings:**
+- `VKLAD` — Cash deposit
+- `PREVOD Z UCTU` — Transfer from another account
+- `VYBER` — Cash withdrawal
+- `PREVOD NA UCET` — Transfer to another account
+- `VYBER KARTOU` — Card withdrawal
+
+---
+
+### 6. order.csv
+
+| Column | Data Type | Description |
+|---|---|---|
+| `order_id` | Integer | Unique identifier of the standing order |
+| `account_id` | Integer | Identifier of the account issuing the order |
+| `bank_to` | Text | Destination bank code |
+| `account_to` | Integer | Destination account identifier |
+| `amount` | Decimal | Standing order amount |
+| `k_symbol` | Text | Purpose/category of the payment |
+
+---
+
+### 7. card.csv
+
+| Column | Data Type | Description |
+|---|---|---|
+| `card_id` | Integer | Unique identifier of the bank card |
+| `disp_id` | Integer | Customer-account relationship identifier |
+| `type` | Text | Type of bank card |
+| `issued` | Text | Card issue date in the original dataset format |
+
+**Card types:**
+- `classic` — Classic card
+- `junior` — Junior card
+- `gold` — Gold card
+
+---
+
+### 8. district.csv
+
+| Column | Data Type | Description |
+|---|---|---|
+| `A1` | Integer | District identifier |
+| `A2` | Text | District name |
+| `A3` | Text | Region |
+| `A4` | Integer | Population |
+| `A5` | Integer | Number of municipalities with less than 499 inhabitants |
+| `A6` | Integer | Number of municipalities with 500–1,999 inhabitants |
+| `A7` | Integer | Number of municipalities with 2,000–9,999 inhabitants |
+| `A8` | Integer | Number of municipalities with more than 10,000 inhabitants |
+| `A9` | Integer | Number of cities |
+| `A10` | Decimal | Ratio of urban inhabitants |
+| `A11` | Integer | Average salary |
+| `A12` | Text | Unemployment rate |
+| `A13` | Decimal | Ratio of entrepreneurs |
+| `A14` | Integer | Number of crimes in the district |
+| `A15` | Text | Unemployment rate in the district |
+| `A16` | Integer | Number of crimes in the previous year |
+
+---
+
+## Key Relationships
+
+The main relationships between the tables are:
+
+- `account.account_id` → `disp.account_id`
+- `account.account_id` → `loan.account_id`
+- `account.account_id` → `trans.account_id`
+- `account.account_id` → `order.account_id`
+- `client.client_id` → `disp.client_id`
+- `client.district_id` → `district.A1`
+- `disp.disp_id` → `card.disp_id`
+
+These relationships allow customer, account, loan, transaction, card, and district information to be combined for business analysis.
+
+---
+
+## Dataset Summary
+
+The dataset contains:
+
+- **5,369 customers**
+- **4,500 accounts**
+- **682 loans**
+- **1,056,320 transactions**
+- **6,471 standing orders**
+- **892 bank cards**
+- **5,369 customer-account relationships**
+- **77 districts**
+
+The dataset provides the foundation for analysing customer behaviour, loan performance, transaction activity, account usage, and regional banking patterns.
 
 ## Project Workflow
 
