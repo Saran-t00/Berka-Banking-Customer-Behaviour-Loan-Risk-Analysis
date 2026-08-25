@@ -155,6 +155,64 @@ The EDA focused on:
 
 This provided visual evidence for the patterns identified through SQL.
 
+## Power BI Dashboard
+
+The final analysis was brought into Power BI as a three-page dashboard. SQL was used to explore and aggregate the banking data, while Python helped validate the patterns before the results were turned into interactive business views in Power BI.
+
+### Page 1 — Banking Analysis
+
+![Power BI Page 1](PowerBI/page1_banking_analysis.png)
+
+The first page gives a quick view of the loan and customer side of the dataset.
+
+- 682 total loans with a total loan amount of 103M.
+- The dashboard covers 5.369K customers.
+- Hlm. Praha has the highest client count among the displayed districts, with 663 clients.
+- Loan status C has the highest count at 403, followed by A (203), D (45) and B (31).
+- Loan amount increases with longer loan duration, reaching 35M at 60 months.
+- Loan amount is highest under status C at 69M.
+- Customer distribution is almost evenly split by gender, with around 3.0K female and 2.3K male customers.
+
+### Page 2 — Loan Performance & Risk Analysis
+
+![Power BI Page 2](PowerBI/page2_loan_risk_analysis.png)
+
+The second page moves from the overall loan picture into loan performance.
+
+- Average loan amount is highest for status D at 0.25M, followed by C (0.17M), B (0.14M) and A (0.09M).
+- Average loan amount rises with loan duration, from 54K at the shorter duration to 244K at 60 months.
+- Hlm. Praha also leads the displayed districts by total loan amount at around 13M.
+- The loan-status distribution changes across different loan durations, showing how portfolio composition shifts as duration increases.
+- Status C carries the largest loan amount at 69M, well above A (19M), D (11M) and B (4M).
+- The district-level status view helps compare how loan outcomes are distributed across the highest-value districts.
+
+### Page 3 — Transaction Analysis
+
+![Power BI Page 3](PowerBI/page3_transaction_analysis.png)
+
+The final page focuses on transaction activity and adds the behavioural side of the analysis.
+
+- Total transaction amount is 6.26bn across 1.05632M transactions.
+- Average transaction amount is 5.92K.
+- PRIJEM contributes the highest transaction amount at 3.2bn, followed by VYDAJ at 2.8bn and VYBER at 0.2bn.
+- Transaction activity rises steadily from 0.03M in 1993 to 0.32M in 1998.
+- VYDAJ has the highest transaction count at 0.63M, followed by PRIJEM at 0.41M and VYBER at 0.02M.
+- VYBER is the most frequent operation in the displayed operation breakdown, while VKLAD and VYBER contribute the largest transaction amounts at around 2.4bn and 2.3bn.
+
+### From Analysis to Dashboard
+
+The dashboard was not treated as a separate analysis. The SQL work was used to identify and aggregate the relevant banking patterns, Python was used to examine and validate the results, and Power BI was then used to present those findings in a more practical visual form.
+
+The three pages therefore move from **loan and customer overview → loan performance and risk → transaction behaviour**, giving a connected view of the banking data rather than isolated charts.
+
+## Recommendations
+
+- Give closer attention to customers associated with higher-risk loan statuses before extending additional credit.
+- Monitor longer-duration loans carefully, as average loan amounts increase with loan duration.
+- Review high-value districts separately because a small number of districts contribute a large share of the displayed loan portfolio.
+- Track transaction activity over time to understand changes in customer banking behaviour.
+- Use transaction type and operation-level patterns together when reviewing customer activity and portfolio movement.
+
 ---
 
 ## Key Findings
@@ -192,7 +250,7 @@ Several high-value loans were also present within repayment-problem categories, 
 
 ---
 
-## Business Recommendations
+##  Overall Business Recommendations
 
 1. Develop financial products and services targeted towards the large 60+ customer segment.
 
