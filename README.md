@@ -161,7 +161,7 @@ The final analysis was brought into Power BI as a three-page dashboard. SQL was 
 
 ### Page 1 — Banking Analysis
 
-![Power BI Page 1](PowerBI/page1_banking_analysis.png)
+![Power BI Page 1](PowerBI/Screenshot%202026-08-24%20122106.png)
 
 The first page gives a quick view of the loan and customer side of the dataset.
 
@@ -175,7 +175,7 @@ The first page gives a quick view of the loan and customer side of the dataset.
 
 ### Page 2 — Loan Performance & Risk Analysis
 
-![Power BI Page 2](PowerBI/page2_loan_risk_analysis.png)
+![Power BI Page 2](PowerBI/Screenshot%202026-08-24%20122027.png)
 
 The second page moves from the overall loan picture into loan performance.
 
@@ -188,7 +188,7 @@ The second page moves from the overall loan picture into loan performance.
 
 ### Page 3 — Transaction Analysis
 
-![Power BI Page 3](PowerBI/page3_transaction_analysis.png)
+![Power BI Page 3](PowerBI/Screenshot%202026-08-24%20121917.png)
 
 The final page focuses on transaction activity and adds the behavioural side of the analysis.
 
