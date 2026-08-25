@@ -162,7 +162,7 @@ The final analysis was brought into Power BI as a three-page dashboard. SQL was 
 
 ### Page 1 — Banking Analysis
 
-![Power BI Page 3](PowerBI/Screenshot%202026-08-24%20121917.png)
+![Power BI Page 3](PowerBI/Screenshot%202026-08-25%20133055.png)
 
 The first page gives a quick view of the loan and customer side of the dataset.
 
