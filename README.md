@@ -80,6 +80,7 @@ The tables were integrated through SQL to perform business analysis and were lat
 - SQL
 - SQLite
 - Jupyter Notebook
+- Power BI
 - VS Code
 - Git & GitHub
 
