@@ -194,3 +194,10 @@ pip install pandas matplotlib jupyter
 
 # open the notebook
 jupyter notebook notebooks/01_berka_banking_analysis.ipynb
+
+
+## 👤 Author
+
+**Saran**
+Marketing × Analytics | Aspiring Data Analyst
+🔗 LinkedIn: [linkedin.com/in/saran-t-297b25290](https://www.linkedin.com/in/saran-t-297b25290)
