@@ -29,7 +29,7 @@ This project brings those records together to:
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 - **notebooks/**
   - `01_berka_banking_analysis.ipynb` — Full SQL + Python analysis
@@ -62,7 +62,7 @@ The Berka Banking dataset consists of **8 relational tables**:
 
 ---
 
-## 🔁 Project Workflow
+## Project Workflow
 
 1. Berka Banking Dataset (CSV)
 2. SQLite Database Setup
@@ -109,20 +109,20 @@ The Power BI report has **3 pages**, built directly on the same SQLite tables us
 
 ### Page 1 - Banking Analysis (Loan & Customer Overview)
 
-![Banking Analysis](Banking_Analysis.png)
+![Banking Analysis](PowerBI/Banking_Analysis.png)
 
 KPIs: 682 total loans · 103M total loan amount · 5,369 total customers
 Visuals: Top 10 Districts by Client, Loan Status Count, Loan Amount by Duration, Loan Amount by Status, Customer Gender Split, Customer Age Group Distribution
 
 ### Page 2 - Loan Performance & Risk Analysis
 
-![Banking Analysis 01](Banking_Analysis_01.png)
+![Loan Performance & Risk Analysis](PowerBI/Banking_Analysis_01.png)
 
 Visuals: Average Loan Amount by Status, Average Loan Amount by Duration, Top 5 Districts by Loan Amount, Loan Status by Duration, Loan Amount Distribution by Status, Loan Status by Top 10 Districts
 
 ### Page 3 - Transaction Analysis
 
-![Banking Analysis 02](Banking_Analysis_02.png)
+![Transaction Analysis](PowerBI/Banking_Analysis_02.png)
 
 KPIs: 6.26bn total transaction amount · 1.05632M total transactions · 5.92K average amount
 Visuals: Transaction Amount/Count by Type, Transaction Trend Over Time (1993–1998), Transaction Count by K-Symbol, Transaction Count & Sum by Operation
