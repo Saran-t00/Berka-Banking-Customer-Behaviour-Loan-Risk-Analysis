@@ -1,5 +1,5 @@
 # Banking Customer Behaviour & Loan Risk Analysis
-### Czech Bank (Berka) Dataset — SQL • Python • Power BI
+### Czech Bank (Berka) Dataset - SQL • Python • Power BI
 
 An end-to-end data analytics project that examines customer behaviour, transaction activity, and loan repayment risk for a retail bank, using the classic **Berka Banking dataset**. The project combines **SQL-driven business analysis**, **Python (Pandas/Matplotlib) validation**, and an **interactive Power BI dashboard** to move from raw relational data to business recommendations.
 
@@ -7,7 +7,7 @@ An end-to-end data analytics project that examines customer behaviour, transacti
 
 ## Project Objective
 
-A bank generates large volumes of operational data across accounts, transactions, cards, standing orders, and loans — but individual records alone don't reveal *which customers are valuable*, *where credit risk is concentrated*, or *how borrowing behaviour differs across customer groups*.
+A bank generates large volumes of operational data across accounts, transactions, cards, standing orders, and loans - but individual records alone don't reveal *which customers are valuable*, *where credit risk is concentrated*, or *how borrowing behaviour differs across customer groups*.
 
 This project brings those records together to:
 - Understand how customers use their accounts and how transaction behaviour varies across the customer base
@@ -108,13 +108,22 @@ Each SQL section in the notebook follows a **Business Context → Business Quest
 The Power BI report has **3 pages**, built directly on the same SQLite tables used in the notebook:
 
 ### Page 1 - Banking Analysis (Loan & Customer Overview)
+
+![Banking Analysis](Banking_Analysis.png)
+
 KPIs: 682 total loans · 103M total loan amount · 5,369 total customers
 Visuals: Top 10 Districts by Client, Loan Status Count, Loan Amount by Duration, Loan Amount by Status, Customer Gender Split, Customer Age Group Distribution
 
 ### Page 2 - Loan Performance & Risk Analysis
+
+![Banking Analysis 01](Banking_Analysis_01.png)
+
 Visuals: Average Loan Amount by Status, Average Loan Amount by Duration, Top 5 Districts by Loan Amount, Loan Status by Duration, Loan Amount Distribution by Status, Loan Status by Top 10 Districts
 
 ### Page 3 - Transaction Analysis
+
+![Banking Analysis 02](Banking_Analysis_02.png)
+
 KPIs: 6.26bn total transaction amount · 1.05632M total transactions · 5.92K average amount
 Visuals: Transaction Amount/Count by Type, Transaction Trend Over Time (1993–1998), Transaction Count by K-Symbol, Transaction Count & Sum by Operation
 
